@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xml:th="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<div id="mobileContainer">
+    <div id="mobileContent">
+
+        <h2>Login</h2>
+
+        <form method="POST" action="/register" class="loginform" name="Mobile Activation Form"th:object="${loginRequest}" >
+
+            <ul>
+                <li>
+                    <label for="UNAME">firstName</label>
+                    <input type="text" id="UNAME" name="UNAME"  onChange='checkusrid(document.getElementById("UNAME").value)' pattern="(?=^.{6,12}$)(?=.*\d)(?=.*[a-z])[a-zA-Z0-9 _-]*$" required>
+                    <span class="loginform_hint">Must be at least 6-12 characters (letters, numbers, underscores, or dashes only; must have at least one letter and one number). Do not use your email address or full name.</span>
+                </li>
+
+                <li>
+                    <label for="UNAME">lastName</label>
+                    <input type="text" id="UNAME" name="UNAME"  onChange='checkusrid(document.getElementById("UNAME").value)' pattern="(?=^.{6,12}$)(?=.*\d)(?=.*[a-z])[a-zA-Z0-9 _-]*$" required>
+                    <span class="loginform_hint">Must be at least 6-12 characters (letters, numbers, underscores, or dashes only; must have at least one letter and one number). Do not use your email address or full name.</span>
+                </li>
+                <li>
+                    <label for="UNAME">email</label>
+                    <input type="text" id="UNAME" name="UNAME"  onChange='checkusrid(document.getElementById("UNAME").value)' pattern="(?=^.{6,12}$)(?=.*\d)(?=.*[a-z])[a-zA-Z0-9 _-]*$" required>
+                    <span class="loginform_hint">Must be at least 6-12 characters (letters, numbers, underscores, or dashes only; must have at least one letter and one number). Do not use your email address or full name.</span>
+                </li>
+                <li>
+                    <label for="UNAME">password</label>
+                    <input type="text" id="UNAME" name="UNAME"  onChange='checkusrid(document.getElementById("UNAME").value)' pattern="(?=^.{6,12}$)(?=.*\d)(?=.*[a-z])[a-zA-Z0-9 _-]*$" required>
+                    <span class="loginform_hint">Must be at least 6-12 characters (letters, numbers, underscores, or dashes only; must have at least one letter and one number). Do not use your email address or full name.</span>
+                </li>
+                <li>
+                    <label for="PASSWORD">address</label>
+                    <input type="password" name="PASSWORD"  id="PASSWORD" required/>
+                    <span class="loginform_hint">Must be at least 6-12 characters (letters, numbers, underscores, must have at least one letter and one number).</span>
+                </li>
+            </ul>
+
+            <div id="loginformBtn">
+                <input type="submit" class="loginformBtn" value="registration" />
+                <input type="reset" class="loginformBtn" value="Clear" />  </div>
+            <a href="/">Main Page</a>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
